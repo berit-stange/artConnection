@@ -1,3 +1,10 @@
+
+# artConnection
+artConnection macht Zusammenhänge zwischen Kunstwerken sichtbar.
+
+Der User kann eine kuratierte Sammlung von Kunstwerken durchsuchen, Kunstwerke mit Bild, Titel, Künstler:in und Datierung ansehen und über weiterführende Informationen Gemeinsamkeiten und Verbindungen zwischen den Werken entdecken.
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
