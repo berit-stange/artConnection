@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "./firebase/firestore";
 import ArtworkCard from "./components/ArtworkCard";
+import SearchInput from "./components/SearchInput";
 
 function App() {
   const [artworks, setArtworks] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     async function loadArtworks() {
@@ -25,14 +27,33 @@ function App() {
     loadArtworks();
   }, []);
 
+  const filteredArtworks = artworks.filter((artwork) => {
+    const search = searchTerm.toLowerCase();
+
+    return (
+      artwork.title?.toLowerCase().includes(search) ||
+      artwork.artistName?.toLowerCase().includes(search)
+    );
+  });
+
   return (
     <main>
       <h1>artConnection</h1>
 
+
+      <SearchInput
+        searchTerm={searchTerm}
+        onSearch={setSearchTerm}
+      />
+      
+
       <div className="artwork-grid">
-        {artworks.map((artwork) => (
-          <ArtworkCard key={artwork.id} artwork={artwork} />
-        ))}
+        {filteredArtworks.map((artwork) => (
+        <ArtworkCard
+          key={artwork.id}
+          artwork={artwork}
+        />
+      ))}
       </div>
     </main>
   );

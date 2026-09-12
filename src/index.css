@@ -48,6 +48,18 @@ main {
   padding: 30px 20px;
 }
 
+.filter {
+  text-align: center;
+  margin: 0 auto;
+  width: 100%; 
+  max-width: 500px; 
+  padding: 10px 12px; 
+  font-size: 16px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  box-sizing: border-box;
+}
+
 .artwork-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
