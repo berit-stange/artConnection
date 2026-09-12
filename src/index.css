@@ -1,13 +1,39 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Urbanist:ital@0;1&display=swap');
+
+:root {
+  --font-serif: 'Fraunces', serif;
+  --font-sans: 'Montserrat', sans-serif;
+  --font-big: 50px;
+  --font-heavy: 600;
+  --font-medium: 500;
+  --font-light: 400;
+  --color-light: #fffefd;
+  --background-dark: #3d5264;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
-  color: #222;
+  font-family: var(--font-sans);
+  background: var(--background-dark);
+  color: var(--color-light);
   width: 100%;
+}
+
+h1{
+  font-family: var(--font-serif);
+  font-size: var(--font-big);
+  text-align: center;
+  margin: 0 0 0 0;
+}
+
+h2 {
+  font-weight: var(--font-medium);
 }
 
 .artwork {
@@ -19,7 +45,7 @@ body {
 main {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 30px 20px;
 }
 
 .artwork-grid {
@@ -30,7 +56,7 @@ main {
 }
 
 .artwork-card {
-  background: white;
+  background: var(--background-dark);
   overflow: hidden;
 }
 
@@ -39,7 +65,7 @@ main {
   width: 100%;
   height: 350px;
   object-fit: contain;
-  background: #eee;
+  background: var(--background-dark);
 }
 
 .artwork-card-content {
